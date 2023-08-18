@@ -1,6 +1,6 @@
 import { useState } from "react";
 // import { ProSidebar } from "react-pro-sidebar";
-
+// always double check syntax errors
 import { ProSidebar, Menu, MenuItem } from "react-pro-sidebar";
 // import { Sidebar, Menu, MenuItem } from "react-pro-sidebar";
 import 'react-pro-sidebar/dist/css/styles.css';
@@ -93,6 +93,7 @@ const Sidebar = () => {
               </Box>
             )}
           </MenuItem>
+{/* figure out how to transfer picutre over properly.  */}
 
           {!isCollapsed && (
             <Box mb="25px">
@@ -101,7 +102,7 @@ const Sidebar = () => {
                   alt="profile-user"
                   width="100px"
                   height="100px"
-                  src={"../../assets/picofmeatseniorshowcase.jpg"}
+                  src={`../../assets/picofmeatseniorshowcase.jpg`}
                   style={{ cursor: "pointer", borderRadius: "50%" }}
                 />
               </Box>
