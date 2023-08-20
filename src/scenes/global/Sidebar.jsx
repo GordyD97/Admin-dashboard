@@ -3,7 +3,8 @@ import { useState } from "react";
 // always double check syntax errors
 import { ProSidebar, Menu, MenuItem } from "react-pro-sidebar";
 // import { Sidebar, Menu, MenuItem } from "react-pro-sidebar";
-import 'react-pro-sidebar/dist/css/styles.css';
+import "react-pro-sidebar/dist/css/styles.css";
+import picofmeatseniorshowcase from "../../assets/picofmeatseniorshowcase.jpg";
 import { Box, IconButton, Typography, useTheme } from "@mui/material";
 import { Link } from "react-router-dom";
 import { tokens } from "../../theme";
@@ -20,30 +21,29 @@ import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
 
- const Item = ({title, to, icon, selected, setSelected}) => {
+const Item = ({ title, to, icon, selected, setSelected }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   return (
     <MenuItem
-    active={selected === title}
-    style={{
-      color: colors.grey[100],
-    }}
-    onClick={() => setSelected(title)}
-    icon={icon}
+      active={selected === title}
+      style={{
+        color: colors.grey[100],
+      }}
+      onClick={() => setSelected(title)}
+      icon={icon}
     >
       <Typography>{title}</Typography>
       <Link to={to} />
     </MenuItem>
   );
- };
+};
 
 const Sidebar = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [selected, setSelected] = useState("Dashboard");
-
 
   return (
     // the properties bellow are overriding the css of react pro sidebar.
@@ -93,7 +93,7 @@ const Sidebar = () => {
               </Box>
             )}
           </MenuItem>
-{/* figure out how to transfer picutre over properly.  */}
+          {/* figure out how to transfer picutre over properly.  */}
 
           {!isCollapsed && (
             <Box mb="25px">
@@ -102,7 +102,7 @@ const Sidebar = () => {
                   alt="profile-user"
                   width="100px"
                   height="100px"
-                  src={`../../assets/picofmeatseniorshowcase.jpg`}
+                  src={"picofmeatseniorshowcase"}
                   style={{ cursor: "pointer", borderRadius: "50%" }}
                 />
               </Box>
