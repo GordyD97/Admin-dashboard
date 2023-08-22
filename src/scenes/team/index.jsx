@@ -14,6 +14,7 @@ const Team = () => {
 const theme = useTheme();
 const colors = tokens(theme.palette.mode);
 
+// columns will represent keys and properties on what we are using. 
 const columns = [
     { field : "id", headerName: "ID" }, 
 { field : "name", headerName: "Name", flex: 1, cellClassName: "name-column--cell",},
@@ -47,7 +48,8 @@ const columns = [
 ];
 
 // stopped at 1:35:20
-
+// find a fix for the size of the data grid. 
+// hard coded a width for the data grid since it didint work.
 return (
   <Box m="20px">
     <Header title="TEAM" subtitle="Managing the Team Members" />
@@ -57,6 +59,7 @@ return (
       sx={{
         "& .MuiDataGrid-root": {
           border: "none",
+          width: "850px",
         },
         "& .MuiDataGrid-cell": {
           borderBottom: "none",
@@ -78,6 +81,9 @@ return (
         "& .MuiCheckbox-root": {
           color: `${colors.greenAccent[200]} !important`,
         },
+        // "& .MuiDataGrid-root" : {
+        //     width: "90%",
+        // },
       }}
     >
       <DataGrid rows={mockDataTeam} columns={columns} />
