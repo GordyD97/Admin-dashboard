@@ -37,9 +37,9 @@ const Form = () => {
   const handleFormSubmit = (values) => {
     console.log(values);
   };
-
+// hard coded width again because of alignment issues 
   return (
-    <Box m="20px">
+    <Box m="20px" width="1050px">
       <Header title="Create User" subtitle="Create a New User Profile" />
 
       <Formik
@@ -138,6 +138,11 @@ const Form = () => {
                   helperText={touched.address2 && errors.address2}
                   sx={{ gridColumn: "span 4" }}
                 />
+              </Box>
+              <Box display="flex" justifyContent="end" mt="20px">
+                <Button type="submit" color="secondary" variant="contained">
+                    Create New User
+                </Button>
               </Box>
             </form>
             
