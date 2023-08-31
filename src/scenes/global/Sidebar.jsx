@@ -4,7 +4,7 @@ import { useState } from "react";
 import { ProSidebar, Menu, MenuItem } from "react-pro-sidebar";
 // import { Sidebar, Menu, MenuItem } from "react-pro-sidebar";
 import "react-pro-sidebar/dist/css/styles.css";
-import picofmeatseniorshowcase from "../../assets/picofmeatseniorshowcase.jpg";
+import Userjpg from "../../assets/picofmeatseniorshowcase.jpg";
 import { Box, IconButton, Typography, useTheme } from "@mui/material";
 import { Link } from "react-router-dom";
 import { tokens } from "../../theme";
@@ -102,7 +102,7 @@ const Sidebar = () => {
                   alt="profile-user"
                   width="100px"
                   height="100px"
-                  src={"picofmeatseniorshowcase"}
+                  src={Userjpg}
                   style={{ cursor: "pointer", borderRadius: "50%" }}
                 />
               </Box>
