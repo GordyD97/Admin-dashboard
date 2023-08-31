@@ -38,9 +38,93 @@ const Dashboard = () => {
           Download Reports
         </Button>
       </Box>
-          {/* grid and charts below  */}
-          
-
+      {/* grid and charts below  */}
+      <Box
+        display="grid"
+        gridTemplateColumns="repeat(12, 1fr)"
+        gridAutoRows="140px"
+        gap="20px"
+        // adjust accordingly
+      >
+        {/* row 1  */}
+        <Box
+          gridColumn="span 3"
+          backgroundColor={colors.primary[400]}
+          display="flex"
+          alignItems="center"
+          justifyContent="center"
+        >
+          <StatBox
+            title="12,361"
+            subtitle="Emails Sent"
+            progress="0.7"
+            increase="+14%"
+            icon={
+              <Emailicon
+                sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
+              />
+            }
+          />
+        </Box>
+        <Box
+          gridColumn="span 3"
+          backgroundColor={colors.primary[400]}
+          display="flex"
+          alignItems="center"
+          justifyContent="center"
+        >
+          <StatBox
+            title="432,225"
+            subtitle="Sales Obtained"
+            progress="0.5"
+            increase="+21"
+            icon={
+              <PointOfSaleIcon
+                sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
+              />
+            }
+          />
+        </Box>
+        <Box
+          gridColumn="span 3"
+          backgroundColor={colors.primary[400]}
+          display="flex"
+          alignItems="center"
+          justifyContent="center"
+        >
+          <StatBox
+            title="32,441"
+            subtitle="New Clients"
+            progress="0.30"
+            increase="+14%"
+            icon={
+              <PersonAddIcon
+                sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
+              />
+            }
+          />
+        </Box>
+        <Box
+          gridColumn="span 3"
+          backgroundColor={colors.primary[400]}
+          display="flex"
+          alignItems="center"
+          justifyContent="center"
+        >
+          <StatBox
+            title="1,335,324"
+            subtitle="Traffic Inbound"
+            progress="0.80"
+            increase="+43%"
+            icon={
+              <TrafficIcon
+                sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
+              />
+            }
+          />
+        </Box>
+        {/* row 2 */}
+      </Box>
     </Box>
   );
 };
