@@ -3,10 +3,10 @@ import { tokens } from "../theme";
 import ProgressCircle from "./ProgressCircle";
 
 import React from 'react'
-import { Palette } from "@mui/icons-material";
+
 
 const StatBox = ({ title, subtitle, icon, progress, increase}) => {
-    const theme = UseTheme();
+    const theme = useTheme();
     const colors = tokens(theme.palette.mode);
 
 
