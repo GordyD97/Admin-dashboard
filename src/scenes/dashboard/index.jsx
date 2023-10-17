@@ -19,7 +19,8 @@ const Dashboard = () => {
   const colors = tokens(theme.palette.mode);
 
   return (
-    <Box m="20px">
+    <Box m="20px" width="1595px" >
+      {/* hardcoded width to large screen. */}
       <Box display="flex" justifyContent="space-between" alignItems="center">
         <Header title="Dashboard" subtitle="welcome to your dashboard" />
 
